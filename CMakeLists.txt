@@ -11,4 +11,6 @@ add_executable(TD1 main.cpp
         fifo.cpp
         fifo.h
         fifoCirc.cpp
-        fifoCirc.h)
+        fifoCirc.h
+        fifoLinked.cpp
+        fifoLinked.h)
