@@ -2,42 +2,41 @@
 // Created by mdoffe on 15/10/2025.
 //
 
-#include "tasMax.h"
+#include "tasMin.h"
 
 #include <iostream>
-#include <ostream>
 
-size_t tasMax::parent(size_t i) const {
+size_t tasMin::parent(size_t i) const {
     return (i-1)/2;
 }
 
-size_t tasMax::leftChild(size_t i) const {
+size_t tasMin::leftChild(size_t i) const {
     return i*2+1;
 }
 
-size_t tasMax::rightChild(size_t i) const {
+size_t tasMin::rightChild(size_t i) const {
     return i*2+2;
 }
 
-void tasMax::moveUp(size_t i) {
+void tasMin::moveUp(size_t i) {
     size_t p = parent(i);
     if (p >= heap.size()) {
         return;
     }
-    if (heap[p] < heap[i]) {
+    if (heap[p] > heap[i]) {
         std::swap(heap[i], heap[p]);
         moveUp(p);
     }
 }
 
-void tasMax::moveDown(size_t i) {
+void tasMin::moveDown(size_t i) {
     size_t j = i;
     size_t l = leftChild(i);
     size_t r = rightChild(i);
-    if (l < heap.size() && heap[l] > heap[j] ) {
+    if (l < heap.size() && heap[l] < heap[j] ) {
         j = l;
     }
-    if (r < heap.size() && heap[r] > heap[j] ) {
+    if (r < heap.size() && heap[r] < heap[j] ) {
         j = r;
     }
     if (j != i) {
@@ -46,12 +45,12 @@ void tasMax::moveDown(size_t i) {
     }
 }
 
-void tasMax::push(int x) {
+void tasMin::push(int x) {
     heap.push_back(x);
     moveUp(heap.size() - 1);
 }
 
-int tasMax::pop() {
+int tasMin::pop() {
     if (heap.size() == 0) {
         std::cout << "empty heap" << std::endl;
     }

@@ -2,13 +2,13 @@
 // Created by mdoffe on 15/10/2025.
 //
 
-#ifndef TD1_TASMAX_H
-#define TD1_TASMAX_H
+#ifndef TD1_TAXMIN_H
+#define TD1_TAXMIN_H
 #include <vector>
 
 
-class tasMax {
-    std::vector <int> heap;
+class tasMin {
+    std::vector<int> heap;
 
     size_t parent(size_t i) const;
     size_t leftChild(size_t i) const;
@@ -23,4 +23,4 @@ public:
 };
 
 
-#endif //TD1_TASMAX_Hf
+#endif //TD1_TAXMIN_H

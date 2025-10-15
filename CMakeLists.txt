@@ -15,4 +15,6 @@ add_executable(TD1 TD1/main.cpp
         TD1/fifoLinked.cpp
         TD1/fifoLinked.h
         TD1/tasMax.cpp
-        TD1/tasMax.h)
+        TD1/tasMax.h
+        TD1/tasMin.cpp
+        TD1/tasMin.h)

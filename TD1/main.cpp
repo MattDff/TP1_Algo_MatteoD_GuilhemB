@@ -5,6 +5,8 @@
 #include "fifo.h"
 #include "fifoCirc.h"
 #include "fifoLinked.h"
+#include "tasMax.h"
+#include "tasMin.h"
 
 int main() {
     /* Test for lifo
@@ -52,9 +54,36 @@ int main() {
     std::cout << queue_linked.pop() << std::endl;
     */
 
-    /* Test for Tas max */
+    /* Test for Tas max
+    tasMax tas_max;
+    tas_max.push(19);
+    tas_max.push(1);
+    tas_max.push(36);
+    tas_max.push(25);
+    tas_max.push(17);
+    tas_max.push(3);
+    tas_max.push(100);
+    tas_max.push(7);
+    tas_max.push(2);
+    for (int indice = 0; indice < 10; indice++) {
+        std::cout << tas_max.pop() << std::endl;
+    }
+    */
 
     /* Test for Tas min */
+    tasMin tas_min;
+    tas_min.push(19);
+    tas_min.push(1);
+    tas_min.push(36);
+    tas_min.push(25);
+    tas_min.push(17);
+    tas_min.push(3);
+    tas_min.push(100);
+    tas_min.push(7);
+    tas_min.push(2);
+    for (int indice = 0; indice < 10; indice++) {
+        std::cout << tas_min.pop() << std::endl;
+    }
 
     return 0;
 }
