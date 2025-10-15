@@ -7,7 +7,7 @@
 
 
 class fifoCirc {
-    int max = 1000;
+    int max = 10000;
     int* queue;
     int front, rear, i, n;
 public:

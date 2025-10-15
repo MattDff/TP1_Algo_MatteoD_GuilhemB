@@ -9,7 +9,7 @@
 
 
 fifoCirc::fifoCirc() {
-    front = 1;
+    front = 0;
     rear = max-1;
     n = 0;
     queue = new int(max);
