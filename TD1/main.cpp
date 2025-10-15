@@ -43,13 +43,18 @@ int main() {
     std::cout << queue_circ.pop() << std::endl;
     */
 
-    /* Test for circular fifo */
+    /* Test for circular fifo
     fifoLinked queue_linked = fifoLinked();
     queue_linked.push(10);
     queue_linked.push(20);
     std::cout << queue_linked.pop() << std::endl;
     std::cout << queue_linked.pop() << std::endl;
     std::cout << queue_linked.pop() << std::endl;
+    */
+
+    /* Test for Tas max */
+
+    /* Test for Tas min */
 
     return 0;
 }
