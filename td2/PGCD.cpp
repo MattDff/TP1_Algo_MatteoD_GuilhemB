@@ -5,19 +5,14 @@
 #include "PGCD.h"
 using namespace std;
 
-int PGCD::getPgcd(int a, int b, int index)
+int PGCD::getPgcd(int a, int b)
 {
-    if (a%index == 0 && b%index == 0)
+    int reste = max (a,b) % min(a,b);
+    if (reste == 0 || min(a,b)==1)
     {
-        pgcd = index;
+        return min(a,b);
     }
-    else if (index >= std::min(a,b))
-    {
-        return pgcd;
-    }
-
-    index++;
-    return getPgcd(a,b,index);
+    return getPgcd(max(a,b) , reste);
 
 }
 

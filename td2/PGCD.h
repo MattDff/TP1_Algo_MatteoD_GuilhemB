@@ -11,7 +11,7 @@ protected:
     int pgcd = 1;
 public:
     PGCD() = default;
-    int getPgcd(int a, int b,int index);
+    int getPgcd(int a, int b);
     ~PGCD();
 };
 
